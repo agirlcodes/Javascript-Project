@@ -2,168 +2,65 @@
 @import "vars";
 body{
     margin: 0%;
-    // background-image: linear-gradient(rgb(252, 206, 132), pink);
     background-color: rgb(252, 206, 132);
-    // border: 100px solid rgba(255, 255, 255, 0.842);
-    // border-bottom: 0px;
-    // border-top: 0px;
 }
-// .fas{
-//     padding: 20px;
-//     font-size: 30px;
-//     width: 50px;
-//     text-align: center;
-//     text-decoration: none;
-//   }
-
-@media screen and(min-width:800.5px){
-    .gridContainer{
-        display: grid;
-        width: auto;
-        grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows: 6em 2em 3fr 5.5em;
-        header{
-            @include logo;
-            grid-row: 1;
-            grid-column: 1/span 4;
-            h1{
-                margin-bottom: 0px;
-            }
-            .container{
-                margin-top: 6%;
-                margin-left: 10%;
-                margin-bottom: 0%;
-                top: 0%;
-                left: 0%;
-            }
-        }
-        nav{
-            grid-column: 2/span 2;
-            grid-row: 2;
-            @include navBar;
-            }
-        aside{
-            margin-left: 15%;
-            margin-top: 10%;
-            grid-row: 3;
-            grid-column: 1/span 2;
-            form{
-                display: flex;
-                flex-direction: column;
-                label{
-                    font-weight: bold;
-                }
-                input{
-                    width:200px;
-                    border: none;
-                    margin: 2px;
-                    margin-top: 2%;;
-                    }
-                    input[type=submit]{
-                        width:60px;
-                        height:30px;
-                        background-color: rgb(255, 187, 0);
-                        border: 2px solid orange;
-                        color: white;
-                        padding: 5px;
-                    }
-            }
-        }
-        #display{
-            grid-row: 3;
-            grid-column: 3/span 4;
-            position: relative;
-            margin: auto;
-            margin-top: 10%;
-            margin-bottom: 10%;
-            img{
-                height: 400px;
-                width: 400px;
-                border-radius: 10%;
-            }
-            .prev, .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 16px;
-                margin-top: -22px;
-                color: white;
-                font-weight: bold;
-                font-size: 18px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-                } 
-                /* Position the "next button" to the right */
-                .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-                }    
-                /* On hover, add a black background color with a little bit see-through */
-                .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.8);
-                }
-        }
-        footer{
-            @include footer;
-            grid-row: 4;
-            grid-column: 1/span 4;
-            background-color: #ffb732d7;
-        }
-    }
-}
-
-@media screen and(min-width:650){
+@media screen and(min-width:600.5px){
 .gridContainer{
-    background-color: blue;
     display: grid;
-    margin-top: 10%;;
     width: auto;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: 3em 3fr 5.5em;
-    grid-gap: 20px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 6em 2em 3fr 5.5em;
     header{
         @include logo;
-        width: 5em;
         grid-row: 1;
-        grid-column: 1;
-        h1{   
-            margin-left: 5%;
-            font-size: 35px;
-            text-align: center;
-        }
-        div{
-            margin-top: -5%;
-            margin-left: 46%;
+        grid-column: 1/span 4;
+         .container{
+            top:15%;
+            left:10%;
         }
     }
     nav{
-        grid-column: 2;
-        grid-row: 1;
-        width: 300px;
+        grid-column: 2/span 2;
+        grid-row: 2;
         @include navBar;
-        align-self: flex-start;
-        margin-left: 34.4%;
-        align-self: center;
-        width: auto;
         }
-   aside{
+    aside{
         margin-left: 15%;
         margin-top: 10%;
-        grid-row: 2;
-        grid-column: 1;
+        grid-row: 3;
+        grid-column: 1/span 2;
+        form{
+            display: flex;
+            flex-direction: column;
+            label{
+                font-weight: bold;
+            }
+            input{
+                width:200px;
+                border: none;
+                margin: 2px;
+                margin-top: 2%;;
+                }
+                input[type=submit]{
+                    width:60px;
+                    height:30px;
+                    background-color: rgb(255, 187, 0);
+                    border: 2px solid orange;
+                    color: white;
+                    padding: 5px;
+                }
+        }
     }
     #display{
-        grid-row: 2;
-        grid-column: 2;
+        grid-row: 3;
+        grid-column: 3/span 4;
         position: relative;
         margin: auto;
         margin-top: 10%;
         margin-bottom: 10%;
         img{
-            height: 300px;
-            width: 300px;
+            height: 400px;
+            width: 400px;
             border-radius: 10%;
         }
         .prev, .next {
@@ -192,35 +89,123 @@ body{
     }
     footer{
         @include footer;
-        grid-row: 3;
-        grid-column: 1/span 2;
+        grid-row: 4;
+        grid-column: 1/span 4;
         background-color: #ffb732d7;
     }
 }
 }
+
+@media screen and(max-width:600.5px){
+    .gridContainer{
+        display: grid;
+        width: 100%;
+        grid-template-columns:2fr 2fr;
+        grid-template-rows: 6em 2em auto 3fr auto;
+        header{
+            @include logo;
+            grid-row: 1;
+            grid-column: 1/span 2;
+
+        }
+        nav{
+            grid-column: 1/span 2;
+            grid-row: 2;
+            @include navBar;
+            }
+        aside{
+            margin: 7%;
+            margin-top: 1%;
+            grid-row: 4;
+            grid-column: 1/span 2;
+            form{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-weight: bold;
+                }
+                input{
+                    width:200px;
+                    border: none;
+                    margin: 2px;
+                    margin-top: 2%;;
+                    }
+                    input[type=submit]{
+                        width:60px;
+                        height:30px;
+                        background-color: rgb(255, 187, 0);
+                        border: 2px solid orange;
+                        color: white;
+                        padding: 5px;
+                    }
+            }
+        }
+        #display{
+            grid-row: 3;
+            grid-column: 1/span 2;
+            margin-bottom: 0%;
+            margin-top: 1%;
+            img{
+                height: 300px;
+                width: 300px;
+                border-radius: 10%;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                } 
+                /* Position the "next button" to the right */
+                .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+                }    
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                }
+        }
+        footer{
+            @include footer;
+            grid-row: 5;
+            grid-column: 1/span 4;
+            background-color: #ffb732d7;
+        }
+    }
+}
+
 @media screen and(max-width:500px){
     .gridContainer{
         margin-top: 5%;
         margin: 1%;
         display: grid;
         grid-template-columns: 99%;
-        grid-template-rows: 10em auto auto auto 6em;
+        grid-template-rows: auto auto auto 6em;
         grid-gap: 0px;
         margin-bottom: 5%;
         header{
             @include logo;
-            grid-row: 2;
+            grid-row: 1;
             grid-column: 1;
             h1{
                 font-size: 25px;
             }
             div{
-                margin-top: -40%;
+                visibility: hidden;
             }
         }
         aside{
             margin: 3%;
-            grid-row: 4;
+            grid-row: 3;
             grid-column: 1;
             form{
                 display: flex;
@@ -260,7 +245,7 @@ body{
                 margin: 10px;
                 border-radius: 20%;
                 width: auto;
-                grid-row: 3;
+                grid-row: 2;
                 grid-column: 1;
                 position: relative;
                 // padding-top: 5px;
@@ -304,7 +289,7 @@ body{
         @include mobileNav;
      }
     footer{
-        grid-row: 5;
+        grid-row: 4;
         grid-column: 1;
         font-weight: lighter;
         font-size: 10px;
