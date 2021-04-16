@@ -1,0 +1,238 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: 60px;
+  margin-bottom: 50%;
+  background-color: none;
+}
+.container .steam {
+  position: relative;
+  overflow: hidden;
+  top: 0px;
+  left: 35px;
+  background-color: white;
+  height: 1em;
+  width: 1em;
+  border-radius: 45%;
+  z-index: 2;
+}
+.container #cloudOne {
+  position: absolute;
+  animation: steamUp 6s ease-out infinite;
+}
+.container #cloudTwo {
+  position: absolute;
+  animation: steamLeft 6s ease-out 0.5s infinite;
+}
+.container #cloudThree {
+  position: absolute;
+  animation: steamRight 6s ease-out 1s infinite;
+}
+.container #cloudFour {
+  position: relative;
+  background-color: #e9f3fc;
+  animation: steamLeft 6s ease-out 1.5s infinite;
+}
+.container .noodle-animation1 {
+  animation: noodleDropIn 1.9s ease-out 1;
+  position: absolute;
+  top: -10px;
+  left: 39px;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 2px solid #522e06;
+  background-color: #f8d330;
+  z-index: 2;
+  overflow: hidden;
+  z-index: 3;
+  left: 25%;
+}
+.container #noodleBallOne::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border: solid 2px #8a8060;
+  border-color: #522e06;
+  border-radius: 50%;
+  top: 4px;
+  left: 1px;
+  width: 3.7em;
+  height: 4em;
+}
+.container #noodleBallOne::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border: solid 2px #8a8060;
+  border-color: #522e06;
+  border-radius: 50%;
+  top: 14px;
+  left: 6px;
+  width: 3em;
+  height: 3em;
+}
+.container .noodle-animation2 {
+  animation: noodleDropIn 1.9s ease-out 1;
+  position: absolute;
+  top: -10px;
+  left: 39px;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 2px solid #522e06;
+  background-color: #f8d330;
+  z-index: 2;
+  overflow: hidden;
+}
+.container #noodleBallTwo::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border: solid 2px #8a8060;
+  border-color: #522e06;
+  border-radius: 50%;
+  top: 18px;
+  left: 15px;
+  width: 2em;
+  height: 2em;
+}
+.container #noodleBallTwo::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border: solid 2px #8a8060;
+  border-color: #522e06;
+  border-radius: 50%;
+  top: 9px;
+  left: 7px;
+  width: 3em;
+  height: 3em;
+}
+
+.chopstickOne {
+  position: absolute;
+  top: -60px;
+  height: 100px;
+  width: 6px;
+  left: 30%;
+  border: 2px solid #1b1a61;
+  border-radius: 10px 10px 80px 80px;
+  background-color: #f7dfc4;
+  transform: rotate(330deg);
+  z-index: 2;
+  animation: chopstickDropIn 0.9s linear 1;
+}
+.chopstickOne .insideStick {
+  width: 6px;
+  height: 16px;
+  border-bottom: 2px solid black;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #f3e9ef;
+}
+
+.chopstickTwo {
+  position: absolute;
+  top: -60px;
+  height: 100px;
+  width: 6px;
+  left: 30%;
+  border: 2px solid #1b1a61;
+  border-radius: 10px 10px 80px 80px;
+  background-color: #f7dfc4;
+  transform: rotate(330deg);
+  z-index: 2;
+  left: 20px;
+  animation: chopstickDropIn 1s linear 1;
+}
+.chopstickTwo .insideStick {
+  width: 6px;
+  height: 16px;
+  border-bottom: 2px solid black;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #f3e9ef;
+}
+
+.bowl {
+  position: absolute;
+  width: 6.7rem;
+  height: 3rem;
+  background: #f3f3f3;
+  border-radius: 5px 5px 50px 50px;
+  border: 2px solid black;
+  z-index: 3;
+  background: repeating-linear-gradient(0deg, #dddcdc, #fbfafa 10px, #5562aa 10px, #47539a 20px);
+}
+
+@keyframes chopstickDropIn {
+  0% {
+    transform: translateY(-350px);
+  }
+  70% {
+    transform: translateY(-350px) translateX(10px);
+  }
+  90% {
+    transform: translateY(-10px) translateX(20px);
+  }
+  100% {
+    transform: rotate(335deg);
+  }
+}
+@keyframes noodleDropIn {
+  0% {
+    transform: translateY(-300px) scaleY(2) scaleX(0.5);
+  }
+  10% {
+    transform: scaleX(0.5);
+  }
+  20% {
+    transform: translateY(0px);
+    transform: scale(1.1, 0.3);
+  }
+  25% {
+    transform: scale(1.1, 0.7);
+  }
+  30% {
+    transform: scale(0.8, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@keyframes steamUp {
+  0% {
+    transform: translateX(5px) translateY(5px) scale(0.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) scale(3);
+    opacity: 0;
+  }
+}
+@keyframes steamLeft {
+  0% {
+    transform: translateX(10px) translateY(5px) scale(0.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px) translateY(-100px) scale(3);
+    opacity: 0;
+  }
+}
+@keyframes steamRight {
+  0% {
+    transform: translateX(10px) translateY(5px) scale(0.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px) translateY(-100px) scale(3);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=logo.css.map */

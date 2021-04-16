@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logo.css">
+</head>
+<body>
+    <div class="gridContainer">
+        <header>  
+            <div class="container">
+                <div class="steam" id="cloudOne"></div>
+                <div class="steam" id="cloudTwo"></div>
+                <div class="steam" id="cloudThree"></div>
+                <div class="steam" id="cloudFour"></div>
+                    <div class="noodle-animation1" id="noodleBallOne"></div>
+                    <div class="noodle-animation2" id="noodleBallTwo"></div>
+                <div id="stick1" class="chopstickOne">
+                    <div class="insideStick"></div>
+                </div>
+                <div id="stick2" class="chopstickTwo">
+                    <div class="insideStick"></div>
+                </div>
+                <div class="bowl"> </div>
+            </div>
+            <h1>Bon Appétit<h1>
+            </header>  
+            <!-- <div class="logoBackground"></div> -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Recipes</a>
+                <a href="recipe-puppy.html">Recipe Puppy</a>
+            </nav>
+            <aside>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus non elit quis tristique. Praesent dignissim libero a ex hendrerit, sed molestie erat tincidunt. Aenean a vestibulum eros. Maecenas dictum ultrices facilisis. Donec gravida orci et consequat varius. Donec bibendum lorem dolor, ut fermentum dolor fermentum nec. Cras ultrices purus sit amet ipsum tempor consectetur. Curabitur a ultrices sem, sit amet tincidunt leo. Aliquam ut ex blandit, gravida arcu sed, faucibus nunc. Vestibulum arcu neque, vestibulum a velit at, ornare scelerisque erat. Praesent ex mi, luctus ac tristique eget, semper sed nibh.
+                    <br>
+                    </p>
+                    <form class="form" name="myForm" onsubmit="return(validate());">
+                        <label>Subscribe to our newsletter to recieve the best recipes! </label> <br> 
+                        <!-- <input type="email" name="email" id="email" placeholder="email@example.com" pattern=".+@gmail.com" required/> -->
+                        <input  type = "text" name = "Name" placeholder="Selena De La Vega">
+                        <input type="email" name="email" placeholder="email@example.com">
+                        <!-- <button id="submit-button" type="submit" value="Submit"> Submit </button> -->
+                        <input type="submit" value="Submit">
+                    </form>
+            </aside>
+        <main id="display">
+                <div class="card"><img src="image/gingerChampagne.jpg"></div>
+                <div class="card"><img src="image/gingerChampagne2.webp"></div>
+                <div class="card"><img src="image/cheesepotatoFritatta2.webp"></div>
+                <div class="card"><img src="image/cheesepotatoFrittata.jpg"></div>
+                <div class="card"> <img src="image/eggnogThumbprint.jpg"></div>
+                <div class="card"><img src="image/eggnogThumbprints2.jpg"></div>
+                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+                <div style="text-align:center"></div>
+            </main>
+        <footer>
+            <p>Developed by Nataly Angulo V.   <br>Powered by Recipe Puppy</p>
+            <p>All rights reserved 2021</p>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+</html>

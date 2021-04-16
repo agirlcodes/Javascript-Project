@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- <link rel="stylesheet" href="css/recipe.css"> -->
+    <link rel="stylesheet" href="css/logo.css">
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header>
+            <div class="container">
+                <div class="steam" id="cloudOne"></div>
+                <div class="steam" id="cloudTwo"></div>
+                <div class="steam" id="cloudThree"></div>
+                <div class="steam" id="cloudFour"></div>
+                <div class="noodle-animation1" id="noodleBallOne"></div>
+                <div class="noodle-animation2" id="noodleBallTwo"></div>
+                <div id="stick1" class="chopstickOne">
+                    <div class="insideStick"></div>
+                </div>
+                <div id="stick2" class="chopstickTwo">
+                    <div class="insideStick"></div>
+                </div>
+                <div class="bowl"> </div>
+            </div>
+            <h1>Bon Appétit<h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Recipes</a>
+            <a href="recipe-puppy.html">Recipe-Puppy</a>
+        </nav>
+        <form>
+            <label for="search"></label>
+            <input type="text" id="search" name="search" placeholder="Search recipe title"> 
+            <button id="search-button"> <i class="fa fa-search"></i> </button>
+            <button id="clear-button"> <i class="fa fa-refresh"></i> </button>
+        </form>
+        <div id="results"></div>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus non elit quis tristique. Praesent
+                dignissim libero a ex hendrerit, sed molestie erat tincidunt. Aenean a vestibulum eros. Maecenas dictum
+                ultrices facilisis. Donec gravida orci et consequat varius. Donec bibendum lorem dolor, ut fermentum
+                dolor fermentum nec. Cras ultrices purus sit amet ipsum tempor consectetur. Curabitur a ultrices sem,
+                sit amet tincidunt leo. Aliquam ut ex blandit, gravida arcu sed, faucibus nunc. Vestibulum arcu neque,
+                vestibulum a velit at, ornare scelerisque erat. Praesent ex mi, luctus ac tristique eget, semper sed
+                nibh.</p>
+        </article>
+        <main>
+            <div id="display"></div>
+        </main>
+        <aside>
+            <div class="modal" id="modal"></div>
+            <div id="overlay"></div>
+        </aside>
+
+        <footer>
+            <p>Developed by Nataly Angulo V. Powered by Recipe Puppy</p>
+            <p>All rights reserved 2021</p>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/apiCall.js"></script>
+<!-- <script src="js/text.js"></script> -->
+<script src="js/animation.js"></script>
+<script src="js/favouriteBar.js"></script>
+
+</html>
