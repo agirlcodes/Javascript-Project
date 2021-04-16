@@ -4,6 +4,12 @@ body {
   margin-top: 10%;
 }
 
+form p {
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: center;
+}
+
 @media screen and (min-width: 650.5px) {
   header {
     grid-row: 1;
@@ -39,7 +45,7 @@ body {
     color: black;
   }
   nav a:hover {
-    text-decoration-style: double;
+    text-decoration: double;
   }
 
   form {
@@ -130,7 +136,7 @@ body {
     color: black;
   }
   nav a:hover {
-    text-decoration-style: double;
+    text-decoration: double;
   }
   nav a {
     align-self: center;

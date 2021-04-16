@@ -9,7 +9,6 @@ let chopstickTwo = document.getElementById('stick2');
 
 noodleOne.addEventListener('click', function(event) {
   event.preventDefault();
-  console.log("hello");
 
   noodleOne.classList.remove('noodle-animation1');
   // keeps the width of the element.

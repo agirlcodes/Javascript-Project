@@ -31,6 +31,11 @@ body {
   color: white;
 }
 
+article {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 @media screen and (min-width: 800.5px) {
   .gridContainer {
     display: grid;
@@ -75,7 +80,7 @@ body {
     color: black;
   }
   .gridContainer nav a:hover {
-    text-decoration-style: double;
+    text-decoration: double;
   }
   .gridContainer nav a {
     padding-left: 50px;
@@ -260,7 +265,7 @@ body {
     color: black;
   }
   .gridContainer nav a:hover {
-    text-decoration-style: double;
+    text-decoration: double;
   }
   .gridContainer nav a {
     padding-left: 50px;
@@ -436,7 +441,7 @@ body {
     color: black;
   }
   .gridContainer nav a:hover {
-    text-decoration-style: double;
+    text-decoration: double;
   }
   .gridContainer nav a {
     align-self: center;

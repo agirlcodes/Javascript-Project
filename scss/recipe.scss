@@ -33,6 +33,10 @@ body{
         }
     }
 }
+article{
+    padding-left: 10%;
+    padding-right: 10%;
+}
 @media screen and(min-width:800.5px){
     .gridContainer{
         display: grid;

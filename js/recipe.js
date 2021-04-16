@@ -6,7 +6,6 @@ const dataRequest = async () => {
 };
 document.addEventListener("DOMContentLoaded", async () => {
 	const dataValue = await dataRequest();
-	console.log(dataValue);
 	for (const value of dataValue.results) {
 		const mainData = document.querySelector("#display");
 		mainData.innerHTML += `
@@ -46,9 +45,7 @@ const searchButton = document.querySelector('#search-button');
 
 	document.querySelector("#display").addEventListener("click", function (e) {
 		getFigcaption = e.target.parentElement.innerText;
-		console.log(getFigcaption);
 		const findAside = document.querySelector("aside");
-		console.log(findAside);
 		findAside.style.display = "block";
 
 		for (const value of dataValue.results) {
@@ -70,11 +67,8 @@ const searchButton = document.querySelector('#search-button');
 	});
 });
 document.querySelector("aside").addEventListener("click", function (x) {
-	// console.log(x);
 	const aside = x.path[3];
-	console.log(aside);
 	if (aside.style.display === "block") {
-		console.log(x);
 		aside.style.display = "none";
 	}
 });
