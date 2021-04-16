@@ -5,44 +5,47 @@
 	<title>Recipe-Puppy</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/recipe.css">
-	<link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/recipe-puppy.css	">
+	<link rel="stylesheet" href="css/simpleLogo.css">
 </head>
 
 <body>
-<div class="gridContainer">
-	<header>
-		<div class="container">
-			<div class="steam" id="cloudOne"></div>
-			<div class="steam" id="cloudTwo"></div>
-			<div class="steam" id="cloudThree"></div>
-			<div class="steam" id="cloudFour"></div>
-			<div class="noodle-animation1" id="noodleBallOne"></div>
-			<div class="noodle-animation2" id="noodleBallTwo"></div>
-			<div id="stick1" class="chopstickOne">
-				<div class="insideStick"></div>
+	<div class="gridContainer">
+		<header>
+			<div class="container">
+				<div class="steam" id="cloudOne"></div>
+				<div class="steam" id="cloudTwo"></div>
+				<div class="steam" id="cloudThree"></div>
+				<div class="steam" id="cloudFour"></div>
+				<div class="noodle-animation1" id="noodleBallOne"></div>
+				<div class="noodle-animation2" id="noodleBallTwo"></div>
+				<div id="stick1" class="chopstickOne">
+					<div class="insideStick"></div>
+				</div>
+				<div id="stick2" class="chopstickTwo">
+					<div class="insideStick"></div>
+				</div>
+				<div class="bowl"> </div>
 			</div>
-			<div id="stick2" class="chopstickTwo">
-				<div class="insideStick"></div>
-			</div>
-			<div class="bowl"> </div>
-		</div>
-		<h1>Bon Appétit<h1>
-	</header>
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="recipe.html">Recipe</a>
-		<a href="recipe-puppy.html">Recipe-Puppy</a>
-	</nav>
-
-	<form action="http://www.recipepuppy.com/" method="get" >
-		<p>Recipe Search by Ingredients:</p>
-		<input type="text" name="i" id="i" value="Enter ingredients" style="color:gray;" onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}" onblur="if(this.value==''){this.style.color='gray';this.value='Enter ingredients';}" />
-		<input type="submit" value="Search"/>
-		<br/>
-		Powered by <a href="http://www.recipepuppy.com" style="font-size:10px;">Recipe Puppy</a>
-	</form>
-</div>
+			<h1>Bon Appétit<h1>
+		</header>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="recipe.html">Recipe</a>
+			<a href="recipe-puppy.html">Recipe-Puppy</a>
+		</nav>
+		<form action="http://www.recipepuppy.com/" method="get" >
+			<p>Recipe Search by Ingredients:</p>
+			<input type="text" name="i" id="i" value="Enter ingredients" style="color:gray;" onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}" onblur="if(this.value==''){this.style.color='gray';this.value='Enter ingredients';}" />
+			<input type="submit" value="Search"/>
+			<br/>
+			Powered by <a href="http://www.recipepuppy.com" style="font-size:10px;">Recipe Puppy</a>
+		</form>
+		<footer>
+            <p>Developed by Nataly Angulo V. <br>Powered by Recipe Puppy</p>
+            <p>All rights reserved 2021</p>
+        </footer>
+	</div>
 </body>
 <script src="js/animation.js"></script>
 </html>

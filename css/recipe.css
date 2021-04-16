@@ -3,13 +3,41 @@ body {
   background-color: #fcce84;
 }
 
+#results {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  max-width: 100%;
+  height: auto;
+}
+#results #layout {
+  background-color: white;
+  border: 10px solid #f39f51;
+}
+#results #layout img {
+  margin-left: 50%;
+}
+#results #layout .dataResults p {
+  width: 200px;
+  margin-left: 45%;
+}
+#results #layout .dataResults a {
+  margin-left: 45%;
+  margin-bottom: 1%;
+  border-radius: 5%;
+  background-color: #f8bd50;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (min-width: 800.5px) {
   .gridContainer {
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 4fr 4fr 1fr;
-    grid-template-rows: 6em auto auto 4em;
+    grid-template-rows: 6em auto auto auto 4em;
   }
   .gridContainer header {
     grid-row: 1;
@@ -17,32 +45,19 @@ body {
     padding: 2%;
   }
   .gridContainer header h1 {
-    margin-top: 50px;
     letter-spacing: 2px;
     z-index: 2;
     text-align: center;
     font-family: monospace;
     font-weight: lighter;
-    justify-content: start;
     text-decoration: underline;
   }
   .gridContainer header .container {
     top: 15%;
     left: 10%;
   }
-  .gridContainer header h1 {
-    margin-left: 6%;
-    font-size: 35px;
-    text-align: center;
-  }
-  .gridContainer header .container {
-    margin-left: 48%;
-    margin-top: 5%;
-    top: 0%;
-    left: 0%;
-  }
   .gridContainer nav {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
     display: flex;
     flex-direction: row;
@@ -67,20 +82,25 @@ body {
     justify-self: end;
     align-self: center;
   }
-  .gridContainer nav a #favouriteStar {
-    width: 3%;
-    position: relative;
-    top: 60px;
-    left: 90%;
-    cursor: pointer;
-    background-color: yellow;
+  .gridContainer #results {
+    position: absolute;
+    margin-left: -50%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+  }
+  .gridContainer #results #layout {
+    background-color: white;
+  }
+  .gridContainer #results #layout h3, .gridContainer #results #layout img, .gridContainer #results #layout p {
+    margin-left: 40%;
   }
   .gridContainer article {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 2/span 2;
   }
   .gridContainer main {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2/span 2;
   }
   .gridContainer main #display {
@@ -167,12 +187,25 @@ body {
     color: white;
   }
   .gridContainer footer {
-    grid-row: 4;
+    width: 100%;
+    margin-bottom: -100px;
+    background-color: #ffb732d7;
+    height: 90px;
+    grid-row: 5;
     grid-column: 1/span 4;
   }
+  .gridContainer footer p {
+    margin-left: 8%;
+    font-size: 13px;
+  }
 }
-@media screen and (min-width: 500.5px) {
+@media screen and (min-width: 630.5px) {
+  body {
+    margin: 0%;
+  }
+
   .gridContainer {
+    margin-top: 5%;
     display: grid;
     width: 100%;
     height: 100%;
@@ -181,17 +214,15 @@ body {
   }
   .gridContainer header {
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 1/span 2;
     padding: 2%;
   }
   .gridContainer header h1 {
-    margin-top: 50px;
     letter-spacing: 2px;
     z-index: 2;
     text-align: center;
     font-family: monospace;
     font-weight: lighter;
-    justify-content: start;
     text-decoration: underline;
   }
   .gridContainer header .container {
@@ -199,24 +230,20 @@ body {
     left: 10%;
   }
   .gridContainer header h1 {
-    margin-left: 6%;
     font-size: 35px;
     text-align: center;
   }
-  .gridContainer header .container {
-    margin-left: 48%;
-    margin-top: 5%;
-    top: 0%;
-    left: 0%;
-  }
   .gridContainer form {
-    grid-column: 1/span 2;
-    grid-row: 2;
-    padding: 10px;
-  }
-  .gridContainer nav {
+    position: relative;
     grid-column: 2;
     grid-row: 1;
+    padding: 10px;
+    margin-top: 1%;
+    margin-left: 35%;
+  }
+  .gridContainer nav {
+    grid-column: 1/span 2;
+    grid-row: 2;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -332,11 +359,19 @@ body {
     color: white;
   }
   .gridContainer footer {
+    width: 100%;
+    margin-bottom: -100px;
+    background-color: #ffb732d7;
+    height: 90px;
     grid-row: 5;
     grid-column: 1/span 4;
   }
+  .gridContainer footer p {
+    margin-left: 8%;
+    font-size: 13px;
+  }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 630px) {
   .gridContainer {
     display: grid;
     width: 100%;
@@ -349,13 +384,11 @@ body {
     grid-column: 1;
   }
   .gridContainer header h1 {
-    margin-top: 50px;
     letter-spacing: 2px;
     z-index: 2;
     text-align: center;
     font-family: monospace;
     font-weight: lighter;
-    justify-content: start;
     text-decoration: underline;
   }
   .gridContainer header .container {
@@ -369,22 +402,29 @@ body {
   .gridContainer header .container {
     visibility: hidden;
   }
+  .gridContainer #results {
+    position: absolute;
+    visibility: hidden;
+  }
   .gridContainer form {
     position: absolute;
     visibility: hidden;
   }
   .gridContainer nav {
-    margin-left: -2%;
     position: fixed;
-    background-color: orange;
-    width: 100%;
-    height: 4em;
-    top: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     font-family: monospace;
+    margin-left: -2%;
+    margin-bottom: -5%;
+    background-color: orange;
+    width: 100%;
+    height: 4em;
+    top: 90%;
     align-items: center;
+    justify-content: space-around;
+    z-index: 10;
   }
   .gridContainer nav a {
     display: flex;
@@ -399,9 +439,11 @@ body {
     text-decoration-style: double;
   }
   .gridContainer nav a {
-    margin-left: -10px;
     align-self: center;
     color: white;
+  }
+  .gridContainer nav a:hover {
+    color: blue;
   }
   .gridContainer article {
     grid-row: 3;
@@ -498,8 +540,16 @@ body {
     color: white;
   }
   .gridContainer footer {
+    width: 100%;
+    margin-bottom: -100px;
+    background-color: #ffb732d7;
+    height: 90px;
     grid-row: 5;
     grid-column: 1;
+  }
+  .gridContainer footer p {
+    margin-left: 8%;
+    font-size: 13px;
   }
 }
 

@@ -24,13 +24,17 @@ const searchButton = document.querySelector('#search-button');
 
 			const searchData = dataValue.results;
 			searchData.forEach(item => {
-				if (item.title.toLowerCase() == introducedTitle.toLowerCase()) {
+				if (item.title.toLowerCase().includes(introducedTitle.toLowerCase())) {
 					const printSearchedData = document.querySelector('#results');
 					printSearchedData.innerHTML = `
+					<div id="layout">
 					<h3> ${item.title} </h3>
 					<img src="${item.thumbnail}">
-					<div class="dataResults">
-					<p> <b> Ingredients: </b> ${item.ingredients}. </p>
+						<div class="dataResults">
+						<p> <b> Ingredients: </b> ${item.ingredients}. </p>
+						<a href="${item.href}">Get Recipe</a>
+						</div>
+					</div>
 					`;
 					} 
 				})

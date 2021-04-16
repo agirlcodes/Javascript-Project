@@ -4,89 +4,97 @@
 
 body{
     background-color: rgb(252, 206, 132);
-	margin-top: 2%;
+	margin: 0%;
+	margin-top: 10%;
 	// width: 0%;
 }
-	.gridContainer{
-		display: grid;
-		grid-template-columns: 100%;
-		grid-template-rows: 10em auto auto 10em;
-		header{
-			grid-row: 2;
-			grid-column: 1;
-			// padding: 2%;
-			// @include logo;
-			h1{   
-				margin: 0%;
-				margin-left: 6%;
-				font-size: 30px;
+@media screen and(min-width:650.5px){
+	header{
+		grid-row: 1;
+		grid-column: 1/span 2;
+		@include logo;
+	}
+	nav{
+		@include navBar;
+		margin-left: -2%;
+		}
+		form{
+			margin-top: 5%;
+			position: static;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			p{
+				font-size: 15px;
 				text-align: center;
 			}
-			.container{
-				margin-left: 48%;
-				margin-top: 25%;
-				top: 0%;
-			}
-		}
-		nav{
-			@include navBar;
-			margin-left: -2%;
-			}
-            form{
-				margin-top: 5%;
-				grid-row: 3;
-				grid-column: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                p{
-					font-size: 13px;
-                    text-align: center;
-                }
-                input{
-                    width:200px;
-                    border: none;
-                    margin: 2px;
-                    }
-                    input[type=text]{
-                        width:150px;
-                        height:30px;
-                        text-align: center;
-
-                    }
-                    input[type=submit]{
-                        width:60px;
-                        height:30px;
-                        background-color: rgb(255, 187, 0);
-                        border: 2px solid orange;
-                        color: white;
-                        padding: 1px;
-                        border-radius: 5%;
-                    }
-            }
-	}
-		
-
-		@media screen and(max-width:650px){
-			header{
-				grid-row: 2;
-				grid-column: 1;
-				padding: 2%;
-				@include logo;
-				h1{   
-					margin-left: 6%;
-					font-size: 35px;
+			input{
+				width:200px;
+				border: none;
+				margin: 2px;
+				}
+				input[type=text]{
+					width:150px;
+					height:30px;
 					text-align: center;
-					top: 0%;
+
 				}
-				div{
-					margin-left: -12.5em;
-					margin-top: 20%;
-					// top: 0%;
-					// left: -2%;
+				input[type=submit]{
+					width:60px;
+					height:30px;
+					background-color: rgb(255, 187, 0);
+					border: 2px solid orange;
+					color: white;
+					padding: 1px;
+					border-radius: 5%;
 				}
-			}
-			nav{
-				@include mobileNav;
-				}
+		}
+		footer{
+			margin-top: 6.7%;
+			padding-top: 10px;
+			background-color: blue;
+			@include footer;
+		}
+}
+
+@media screen and(max-width:650px){
+	header{
+		@include logo;
+		div{
+			visibility: hidden;
+		}
 	}
+	nav{
+		@include mobileNav;
+		}
+		form{
+			position: static;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			p{
+				font-size: 13px;
+				text-align: center;
+			}
+			input{
+				width:200px;
+				border: none;
+				margin: 2px;
+				}
+				input[type=text]{
+					width:150px;
+					height:30px;
+					text-align: center;
+
+				}
+				input[type=submit]{
+					width:60px;
+					height:30px;
+					background-color: rgb(255, 187, 0);
+					border: 2px solid orange;
+					color: white;
+					padding: 1px;
+					border-radius: 5%;
+				}
+		}
+}
